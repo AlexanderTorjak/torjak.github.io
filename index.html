@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alexander Torjak — Engineering Portfolio</title>
+<meta name="description" content="Robotics, controls, and hardware engineering projects by Alexander Torjak.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sheet">
+
+  <!-- ===== TITLE BLOCK / HEADER ===== -->
+  <header class="titleblock" id="top">
+    <div class="tb-main">
+      <p class="tb-field">PORTFOLIO — SHEET 01</p>
+      <h1>Alexander Torjak</h1>
+      <p class="role">Mechanical Engineer &mdash; Controls, Robotics &amp; Hardware Design</p>
+      <p class="summary">I build systems that sense, move, and hold steady &mdash; from PID-tuned motor controllers
+        to rover suspensions tested against asteroid terrain. This page collects the projects, on my own time
+        and in the field, that taught me how to take a design from equations to a working prototype.</p>
+    </div>
+    <div class="tb-meta">
+      <dl>
+        <div><dt>Based in</dt><dd>Arlington, VA</dd></div>
+        <div><dt>Role</dt><dd>Controls Engineer I, BW Design Group</dd></div>
+        <div><dt>Education</dt><dd>B.S. Mech. Eng., UGA &rsquo;24</dd></div>
+        <div><dt>Contact</dt><dd><a href="mailto:alexandertorjak@gmail.com">alexandertorjak@gmail.com</a></dd></div>
+        <div><dt>Profile</dt><dd><a href="https://www.linkedin.com/in/alexander-torjak-011235/" target="_blank" rel="noopener">LinkedIn</a></dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <nav class="jumpnav">
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+  </nav>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="section-head">
+      <h2>Projects</h2>
+      <p class="section-note">Five builds, from an analog levitation controller to a 3D-printed obstacle-avoidance
+        car. Filter by discipline, or scroll through all five.</p>
+    </div>
+
+    <div class="filters" role="group" aria-label="Filter projects by category">
+      <button class="chip is-active" data-filter="all">All</button>
+      <button class="chip" data-filter="controls">Controls &amp; PID</button>
+      <button class="chip" data-filter="embedded">Embedded</button>
+      <button class="chip" data-filter="mechanical">Mechanical / CAD</button>
+      <button class="chip" data-filter="sensors">Sensors</button>
+    </div>
+
+    <div class="drawings">
+
+      <article class="drawing" data-category="mechanical embedded controls">
+        <div class="dwg-head">
+          <div class="dwg-no">DWG 01</div>
+          <h3>E5-P0 &mdash; Obstacle Avoidance Robot</h3>
+          <div class="dwg-date">June 2025 &ndash; April 2026</div>
+        </div>
+        <div class="dwg-tags">
+          <span>Mechanical</span><span>Embedded</span><span>Controls</span>
+        </div>
+        <p class="dwg-lede">An 8&Prime; x 9&Prime; x 4&Prime; autonomous car, built to test my ability to design a
+          chassis around an electrical system and hold up an interdisciplinary project end to end.</p>
+        <ul>
+          <li>3D modeled and printed a chassis that mounted four motors using hardware-store screws &mdash; no
+            custom fasteners required.</li>
+          <li>Researched and tested batteries to find one that could supply the needed current for the target
+            runtime and still recharge reliably.</li>
+          <li>Selected and configured three ultrasonic sensors to detect obstacles and measure distance to
+            collision.</li>
+          <li>Programmed an Arduino Mega with two PID control loops &mdash; one for forward/backward speed, one
+            for the left&ndash;right motor differential that sets the turn radius.</li>
+        </ul>
+      </article>
+
+      <article class="drawing" data-category="embedded sensors">
+        <div class="dwg-head">
+          <div class="dwg-no">DWG 02</div>
+          <h3>Smart Home Thermometer</h3>
+          <div class="dwg-date">January 2025</div>
+        </div>
+        <div class="dwg-tags">
+          <span>Embedded</span><span>Sensors</span>
+        </div>
+        <p class="dwg-lede">A Raspberry Pi&ndash;based thermometer that logs temperature and humidity to
+          ThingSpeak every hour.</p>
+        <ul>
+          <li>Converted raw voltage from a thermistor and a humidity module into accurate readings using their
+            datasheets.</li>
+          <li>Derived a linear calibration function from recorded data to correct sensor drift.</li>
+          <li>Set up the Pi to push readings to ThingSpeak on an hourly schedule for remote viewing.</li>
+        </ul>
+      </article>
+
+      <article class="drawing" data-category="mechanical">
+        <div class="dwg-head">
+          <div class="dwg-no">DWG 03</div>
+          <h3>NASA 16-Psyche Articulating Wheel Set</h3>
+          <div class="dwg-date">August 2023 &ndash; May 2024</div>
+        </div>
+        <div class="dwg-tags">
+          <span>Mechanical</span><span>Dynamics</span>
+        </div>
+        <p class="dwg-lede">A wheel-and-suspension system prototyped for a rover intended to traverse the surface
+          of asteroid 16 Psyche.</p>
+        <ul>
+          <li>Applied dynamics, rigid-body physics, and statics to predict rover velocity and acceleration across
+            four surfaces with different friction coefficients.</li>
+          <li>Estimated the inclines and slope angles the rover would struggle to climb, and used that to set
+            design limits on dimensions and center of mass.</li>
+          <li>Ran experimental trials over simulated terrain &mdash; concrete, sand, and a rock&ndash;sand mix
+            &mdash; timing travel over a fixed distance at varying angles.</li>
+          <li>Compared experimental results against simulation to validate design decisions, then presented
+            findings to both domain experts and a general audience.</li>
+        </ul>
+      </article>
+
+      <article class="drawing" data-category="controls">
+        <div class="dwg-head">
+          <div class="dwg-no">DWG 04</div>
+          <h3>Magnetic Levitator</h3>
+          <div class="dwg-date">January &ndash; April 2024</div>
+        </div>
+        <div class="dwg-tags">
+          <span>Controls</span><span>Analog Circuit</span>
+        </div>
+        <p class="dwg-lede">A PD feedback controller that levitates a metallic object at a fixed distance beneath
+          an electromagnet.</p>
+        <ul>
+          <li>Specified coil windings and wire diameter for the levitated mass, then designed an analog PID
+            circuit around op-amps and MOSFETs.</li>
+          <li>Chose potentiometers to stabilize the controller's gain values.</li>
+          <li>Found that potentiometer resolution wasn't precise enough to hold the object stable past three
+            seconds &mdash; a hardware limit that clarified why software-based control matters.</li>
+        </ul>
+      </article>
+
+      <article class="drawing" data-category="embedded sensors">
+        <div class="dwg-head">
+          <div class="dwg-no">DWG 05</div>
+          <h3>Sensor-Automated Christmas Lights</h3>
+          <div class="dwg-date">November 2023</div>
+        </div>
+        <div class="dwg-tags">
+          <span>Embedded</span><span>Sensors</span>
+        </div>
+        <p class="dwg-lede">A final project for a sensors-and-actuators course: use three different sensor types
+          to drive one output through an Arduino.</p>
+        <ul>
+          <li>Built a circuit combining a photoresistor, a microphone, and a capacitive touch switch to interpret
+            multiple sensor inputs.</li>
+          <li>Used an Arduino Uno to process that data and switch an AC-sourced relay controlling a strand of LED
+            lights.</li>
+          <li>Learned how digital logic and multi-sensor fusion apply to real systems, and how to read a
+            datasheet to choose and calibrate the right sensor for the job.</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="section">
+    <div class="section-head">
+      <h2>Experience</h2>
+    </div>
+    <div class="exp-list">
+      <div class="exp-row">
+        <div class="exp-meta">
+          <p class="exp-role">Controls Engineer I</p>
+          <p class="exp-org">BW Design Group &mdash; Arlington, VA</p>
+          <p class="exp-date">June 2026 &ndash; Present</p>
+        </div>
+        <ul>
+          <li>Test, troubleshoot, and debug I/O modules, temperature and pressure sensors, and large-scale 480V
+            actuators used to operate data centers.</li>
+          <li>Lead a team of 2&ndash;5 engineers and commissioning technicians to deliver control systems on
+            schedule.</li>
+          <li>Wrote the technical manual engineers use to test and configure data center sensors and devices.</li>
+        </ul>
+      </div>
+      <div class="exp-row">
+        <div class="exp-meta">
+          <p class="exp-role">Project Engineer Intern</p>
+          <p class="exp-org">Shaw Industries &mdash; Dalton, GA</p>
+          <p class="exp-date">May &ndash; August 2023</p>
+        </div>
+        <ul>
+          <li>Designed a new guard-rail system in Inventor for the dye line of the plant's busiest carpet
+            manufacturing line.</li>
+          <li>Wrote a Python program that calculates the minimum stock of aluminum and stainless angles and bars
+            needed for a design.</li>
+          <li>Updated plant circuit breaker documentation in AutoCAD Electrical alongside the project engineering
+            team.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section">
+    <div class="section-head">
+      <h2>Skills</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Controls &amp; Firmware</h3>
+        <p>PID Controller Design &middot; Arduino Uno / Mega &middot; ESP32 &middot; Raspberry Pi &middot;
+          Differential Equations</p>
+      </div>
+      <div class="skill-group">
+        <h3>Software &amp; Analysis</h3>
+        <p>Python (NumPy) &middot; C++ &middot; MATLAB / Simulink</p>
+      </div>
+      <div class="skill-group">
+        <h3>Design &amp; Fabrication</h3>
+        <p>Inventor &middot; AutoCAD &middot; PCB Design &middot; 3D Printing &middot; Laser Cutter</p>
+      </div>
+      <div class="skill-group">
+        <h3>Test &amp; Build</h3>
+        <p>Oscilloscope &amp; Multimeter &middot; RC Circuit Design &middot; Breadboard Prototyping &middot;
+          Soldering &middot; Welding &middot; Sensor &amp; Actuator Integration</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="section">
+    <div class="section-head">
+      <h2>Education</h2>
+    </div>
+    <div class="edu-row">
+      <div>
+        <p class="exp-role">B.S. Mechanical Engineering</p>
+        <p class="exp-org">University of Georgia, Athens, GA &mdash; Honors College</p>
+      </div>
+      <div class="edu-meta">
+        <span>GPA 3.86</span>
+        <span>May 2024</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Alexander Torjak &middot; <a href="mailto:alexandertorjak@gmail.com">alexandertorjak@gmail.com</a> &middot;
+      <a href="https://www.linkedin.com/in/alexander-torjak-011235/" target="_blank" rel="noopener">LinkedIn</a></p>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
