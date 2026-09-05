@@ -8,9 +8,11 @@
   --copper:     #A85A22;
   --copper-dark:#7C4118;
 
-  --display: 'Space Grotesk', sans-serif;
-  --body:    'IBM Plex Sans', sans-serif;
-  --mono:    'IBM Plex Mono', monospace;
+  --display:'Caro', sans-serif;
+  /* 'Space Grotesk', sans-serif; */
+  --body: 'Inter', sans-serif;
+  /* --body:    'IBM Plex Sans', sans-serif; */
+  --mono:  'IBM Plex Mono', monospace;
 }
 
 *{box-sizing:border-box;}
